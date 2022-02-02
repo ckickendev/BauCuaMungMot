@@ -22,7 +22,7 @@ $(document).ready(function () {
       clearInterval(randomDices);
       handleResult();
       newRound();
-    }, 500);
+    }, 5000);
   });
 });
 
@@ -37,7 +37,7 @@ const displayAlert = (money, currentMoney) => {
     }else{
       alert("Vòng này bạn hòa");
     }
-  }, 500)
+  }, 1000)
 }
 
 const newRound = () => {
