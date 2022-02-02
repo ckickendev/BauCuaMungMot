@@ -21,22 +21,34 @@ $(document).ready(function () {
     setTimeout(() => {
       clearInterval(randomDices);
       handleResult();
-      newRound()
-    }, 3000);
+      newRound();
+    }, 500);
   });
 });
 
+const displayAlert = (money, currentMoney) => {
+  
+  setTimeout(() => {
+    // console.log("money", money, "currentNumber", currentMoney);
+    if(money < currentMoney) {
+      alert(`Xin chúc mừng !, bạn đã thắng ${currentMoney-money} đ trong vòng chơi này`);
+    }else if(currentMoney < money){
+      alert(`Bạn đã thua ${money-currentMoney} đ trong vòng chơi này`);
+    }else{
+      alert("Vòng này bạn hòa");
+    }
+  }, 500)
+}
 
 const newRound = () => {
   var spaceBauCua = $(".space .imgwapper .img_baucua").toArray();
   spaceBauCua.forEach(element => {
-    console.log($(element).next()[0]);
+    // console.log($(element).next()[0]);
     if($(element).next()[0]){
       $(element).next().remove();
     }
   })
 }
-
 
 const handleResult = () => {
   var dicesAfter = $(".dice").toArray();
@@ -48,7 +60,7 @@ const handleResult = () => {
       }
     }
   });
-  console.log(resultNumber);
+  // console.log(resultNumber);
 
   var spaceBauCua = $(".space .imgwapper .img_baucua").toArray();
   let arrayBet = [];
@@ -62,29 +74,25 @@ const handleResult = () => {
       arrayBet.push(0);
     }
   });
-  console.log(arrayBet);
-
+  // console.log(arrayBet);
 
   let currentMoney = Number($("#money")[0].getAttribute("value"));
-  const money = currentMoney;
+  let money = currentMoney;
   for(index in arrayBet){
     const appear = resultNumber.filter(e => e == index).length;
-    console.log(appear);
+    // console.log(arrayBet[index], appear);
     if(arrayBet[index] != 0 && appear ){
+      // console.log(`${index} xuat hien ${appear} lan`);
       currentMoney += arrayBet[index] * (appear + 1);
     }
   }
-  console.log(currentMoney);a
+  arrayBet.forEach(e => {
+    money += e;
+  })
+  // console.log(currentMoney);
   $("#money").html(currentMoney);
   $("#money")[0].setAttribute("value", currentMoney);
-  if(money > currentMoney) {
-    alert(`Xin chúc mừng !, bạn đã thắng ${money-currentMoney} đ trong vòng chơi này`);
-  }else if(currentMoney > money){
-    alert(`Bạn đã thua ${currentMoney-money} đ trong vòng chơi này`);
-  }else{
-    alert("Vòng này bạn hòa");
-  }
-
+  displayAlert(money, currentMoney);
 };
 
 const randomSetImg = (element) => {
