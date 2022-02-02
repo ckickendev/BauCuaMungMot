@@ -74,7 +74,7 @@ const handleResult = () => {
       currentMoney += arrayBet[index] * (appear + 1);
     }
   }
-  console.log(currentMoney);
+  console.log(currentMoney);a
   $("#money").html(currentMoney);
   $("#money")[0].setAttribute("value", currentMoney);
   if(money > currentMoney) {
