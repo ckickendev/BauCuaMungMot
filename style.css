@@ -76,13 +76,15 @@
 }
 
 .input_price_bet {
-  width: 100px;
+  border-radius: 4px solid rgb(126, 22, 22);
+  width: 50%;
   background: url("./img/moneydollar.webp");
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
   bottom: 20px;
-  left: 33%;
+  left: 25%;
+  /* right: 3%; */
   background-color: rgba(145, 87, 87, 0);
   color: rgb(83, 39, 39);
   border: none;
@@ -101,8 +103,9 @@
 }
 
 .img_baucua {
+  border-radius: 30px;
   width: 100%;
-  margin: 20px;
+  margin: 20px 0px 5px 0px;
 }
 
 .img_baucua:hover {
@@ -116,6 +119,7 @@
 }
 
 .dice {
+  border-radius: 18px;
   margin: 20px;
 }
 

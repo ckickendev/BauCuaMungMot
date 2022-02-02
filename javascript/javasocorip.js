@@ -22,7 +22,7 @@ $(document).ready(function () {
       clearInterval(randomDices);
       handleResult();
       newRound();
-    }, 5000);
+    }, 4000);
   });
 });
 
