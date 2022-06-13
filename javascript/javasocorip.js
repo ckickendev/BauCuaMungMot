@@ -27,7 +27,6 @@ $(document).ready(function () {
 });
 
 const displayAlert = (money, currentMoney) => {
-  
   setTimeout(() => {
     // console.log("money", money, "currentNumber", currentMoney);
     if(money < currentMoney) {

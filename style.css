@@ -118,49 +118,53 @@
   text-align: center;
 }
 
+.rollstart{
+  border-radius: 30px;
+}
+
 .dice {
   border-radius: 18px;
   margin: 20px;
 }
 
 #dice_bau {
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
   background: url("./img/dice/bau.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 #dice_cua {
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
   background: url("./img/dice/cua.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 #dice_tom {
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
   background: url("./img/dice/tom.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 #dice_ca {
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
   background: url("./img/dice/ca.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 #dice_nai {
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
   background: url("./img/dice/nai.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 #dice_ga {
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
   background: url("./img/dice/ga.png");
   background-repeat: no-repeat;
   background-size: cover;

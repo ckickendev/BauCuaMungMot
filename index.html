@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bau Cua Cuc Manh - Gin</title>
-    <link rel="icon" href="https://rgb.vn/wp-content/uploads/2016/02/bau-cua-tom-ca-02.gif">
+    <link
+      rel="icon"
+      href="https://rgb.vn/wp-content/uploads/2016/02/bau-cua-tom-ca-02.gif"
+    />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -19,6 +22,64 @@
     <div class="main">
       <div class="info">
         <div class="info_title text-center"><h3>Bầu cua tôm cá</h3></div>
+        <div class="text-center">
+          <button 
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          >
+            Hướng dẫn chơi 
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    Hướng Dẫn Chi Tiết
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p class="">Bạn sẽ được cấp 1000000 vnd</p>
+                  <p>Bắt Đầu</p>
+                  <p>Dưới sàn cược, click vào từng ô bạn chọn với mức cược bạn mong muốn (Có thể thay đổi ở phần chọn mức cược)</p>
+                  <p>Ở roll site, có ba hình ảnh tượng trung cho ba viên xúc xắc, ở dưới ảnh có nút start chính là nút để bắt đầu game </p>
+                  <p>Lúc bạn bắt đầu bấm start, trò chơi bắt đầu, sau một khoảng thời gian kết quả sẽ được hiện lên </p>
+                  <p>Lượm lúa</p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">
+                    Close but blue color
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="info_wallet text-warning">
         <h3>Số tiền của bạn</h3>
@@ -39,9 +100,24 @@
           <div class="add btn btn-danger" id="add">+</div>
         </div>
       </div>
-
+      <div class="roll container border border-success rounded-5 mt-4">
+        <div style="background-color: yellow; width: 30%; margin: auto">
+          <h3 class="text-center text-danger mt-4">Roll site</h3>
+        </div>
+        <div class="rollinfo">
+          <img class="dice" alt="" />
+          <img class="dice" alt="" />
+          <img class="dice" alt="" />
+        </div>
+        <div
+          class="text-center rollstart btn btn-warning start_button col-md-6 p-4"
+          id="rollstart"
+        >
+          <p class="text-light display-4">Start</p>
+        </div>
+      </div>
       <div class="container border border-success rounded-5 mt-4">
-        <div style="background-color: yellow; width: 30%; margin: auto;">
+        <div style="background-color: yellow; width: 30%; margin: auto">
           <h3 class="text-center text-danger mt-4">Sàn cược</h3>
         </div>
         <div class="space">
@@ -71,16 +147,7 @@
           </div>
         </div>
       </div>
-      <div class="roll">
-        <div class="rollinfo">
-          <img class="dice" alt="" />
-          <img class="dice" alt="" />
-          <img class="dice" alt="" />
-        </div>
-        <div class="text-center rollstart btn btn-warning start_button" id="rollstart">
-          Start
-        </div>
-      </div>
+      
     </div>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
